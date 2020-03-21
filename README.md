@@ -47,6 +47,7 @@ Copy the `config.json.sample` to `config.json` and Replace the following placeho
 | `dm_not_in_voice_channel` | Text that will be send before `dm_command_hint` in a DM if author of LFG command is not in a voice channel  |
 | `dm_no_lfg_command`       | Text that will be send before `dm_command_hint` in a DM if author did not issue the LFG command in the LFG channel |
 | `invite_max_age`          | How long should an invite be valid in seconds |
+| `purge_messages_after`    | After how many seconds should and invite in the LFG channel deleted |
 
 
 ## Run
