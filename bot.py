@@ -153,7 +153,27 @@ async def add_id(ctx):
     log_message(guild, f'* invite has been created')
 
 
-# TODO delete messages in lfg channel that don't contain a command
+@lfg_bot.event
+async def on_message(message):
+
+    guild = message.guild
+    author = message.author
+    channel = message.channel
+
+    # check if message is not a DM and not created by a bot
+    if not isinstance(channel, discord.DMChannel) and not message.author.bot:
+
+        lfg_channel_id = get_config()['lfg_channel_id']
+
+        # check if message was send to the lfg channel and does not contain an lfg 
+        if (channel.id == get_config()['lfg_channel_id']) and not (command_prefix + lfg_command in message.content):
+            dm_no_lfg_command = get_config()['dm_no_lfg_command'] 
+            await send_command_error_message(author, dm_no_lfg_command)
+            await message.delete()
+            log_message(guild, f'" message of "{author}" in "{channel}#{channel.id} was deleted since it did not contain a command"')
+            return
+
+        await lfg_bot.process_commands(message)
 
 
 lfg_bot.run(DISCORD_TOKEN)
