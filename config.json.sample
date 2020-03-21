@@ -1,0 +1,5 @@
+{
+    "command_prefix": "!",
+    "lfg_command": "lfg",
+    "lfg_channel_id": {lfg_channel_id} 
+}
