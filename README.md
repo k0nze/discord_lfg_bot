@@ -15,6 +15,7 @@ Create a Discord application and bot in the Discord developer portal and make su
     * Send Messages
     * Manage Messages
     * Embed Links
+    * Read Message History
     * Mention Everyone
     * Use External Emoji
     * Add Reactions
