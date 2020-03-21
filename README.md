@@ -1,6 +1,6 @@
-# Discord LFG Bot
+# Discord Looking for Group Bot
 
-TOOD Description
+This bot listens to the `!lfg` command in a specified channel and based on it creates an invite into a voice channel. The invite into a voice channel will be created if a role was mentioned and an invite message was added to the command. It also checks if the author of the invite is in a voice channel.
 
 ## Setup
 
