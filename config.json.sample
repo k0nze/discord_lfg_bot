@@ -4,9 +4,9 @@
     "lfg_channel_id": {lfg_channel_id} 
     "command_synopsis": "`{command_prefix}{lfg_command} @ROLE_MENTION TEXT`",
     "dm_command_hint": "Your message should look like the following:",
-    "dm_no_role_mentioned": "**Your message was delete since no role was mentioned in it.**",
-    "dm_no_lfg_message": "**Your message was delete since you did not include a text in it.**",
-    "dm_not_in_voice_channel": "**Your message was delete since you are not in a voice channel**",
+    "dm_no_role_mentioned": "**Your message was deleted since no role was mentioned in it.**",
+    "dm_no_lfg_message": "**Your message was deleted since you did not include a text in it.**",
+    "dm_not_in_voice_channel": "**Your message was deleted since you are not in a voice channel**",
     "dm_no_lfg_command": "**Your message was deleted since it did not contain a command**",
     "invite_max_age": 1200,
     "purge_messages_after": 1200
