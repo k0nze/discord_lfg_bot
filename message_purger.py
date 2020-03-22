@@ -13,8 +13,6 @@ class MessagePurger(commands.Cog):
 
     def check_id(self, message):
         exclude_from_purging = self.config.get('exclude_from_purging')
-        print(message.id)
-        print(exclude_from_purging)
         return message.id not in exclude_from_purging
 
 
