@@ -9,5 +9,6 @@
     "dm_not_in_voice_channel": "**Your message was deleted because you are not in a voice channel**",
     "dm_no_lfg_command": "**Your message was deleted because it did not contain a command**",
     "invite_max_age": 1200,
-    "purge_messages_after": 1200
+    "purge_messages_after": 1200,
+    "exclude_from_purging": []
 }

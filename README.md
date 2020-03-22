@@ -2,6 +2,8 @@
 
 This bot listens to the `!lfg` command in a specified channel and based on it creates an invite into a voice channel. The invite into a voice channel will be created if a role was mentioned and an invite message was added to the command. It also checks if the author of the invite is in a voice channel.
 
+![Screencast](./images/screencast_large.gif)
+
 ## Setup
 
 Create a Discord application and bot in the Discord developer portal and make sure to set the following persmissions:
@@ -34,13 +36,13 @@ Copy the `.env.sample` and replace `{discord-token}` with your bot's Discord tok
 cp .env.sample .env
 ```
 
-Copy the `config.json.sample` to `config.json` and Replace the following placeholders
+Copy the `config.json.sample` to `config.json` and adjust the following parameters:
 
 | Name                      | Description |
 | ------------------------- | ------------- |
-| `command_prefix`          | On which command prefix should the bot be triggered |
-| `lfg_command`             | Command after `command_prefix` which will generate a voice channel invite |
-| `lfg_channel_id`          | ID of the channel to which the bot should listen to the LFG command: `command_prefix``lfg_command` |
+| `command_prefix`          | On which command prefix should the bot be triggered (default `!`) |
+| `lfg_command`             | Command after `command_prefix` which will generate a voice channel invite (default `!lfg`) |
+| `lfg_channel_id`          | ID of the channel to which the bot should listen to the LFG command |
 | `command_synopsis`        | Explains how an LFG command should be structured. This will be send as a DM to a member who used command wrong |
 | `dm_command_hint`         | Text that will be send before the `command_synopsis` in a DM |
 | `dm_no_role_mentioned`    | Text that will be send before `dm_command_hint` in a DM if no role was mentioned in the LFG command |
@@ -49,6 +51,7 @@ Copy the `config.json.sample` to `config.json` and Replace the following placeho
 | `dm_no_lfg_command`       | Text that will be send before `dm_command_hint` in a DM if author did not issue the LFG command in the LFG channel |
 | `invite_max_age`          | How long should an invite be valid in seconds |
 | `purge_messages_after`    | After how many seconds should and invite in the LFG channel deleted |
+| `exclude_from_purging`    | List of message IDs that should not be deleted while purging the LFG channel |
 
 
 ## Run

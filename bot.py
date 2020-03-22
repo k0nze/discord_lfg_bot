@@ -11,6 +11,7 @@ from discord.ext import commands
 from os.path import join, dirname
 from dotenv import load_dotenv
 
+VERSION = "0.1"
 
 message_purger = None
 
@@ -49,7 +50,7 @@ async def send_command_error_message(member, additional_content):
 @lfg_bot.event
 async def on_ready():
 
-    print(str(datetime.now()) + " - " + f'{lfg_bot.user.name} has connected to Discord')
+    print(str(datetime.now()) + " - " + f'{lfg_bot.user.name} version {VERSION} has connected to Discord')
 
     # check if bot has connected to guilds
     if len(lfg_bot.guilds) > 0:
