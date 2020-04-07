@@ -11,7 +11,7 @@ from discord.ext import commands
 from os.path import join, dirname
 from dotenv import load_dotenv
 
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 
 message_purger = None
 
@@ -169,7 +169,7 @@ async def on_message(message):
             dm_no_lfg_command = config.get('dm_no_lfg_command')
             await send_command_error_message(author, dm_no_lfg_command)
             await message.delete()
-            log_message(guild, f'" message of "{author}" in "{channel}#{channel.id}" was deleted since it did not contain a command')
+            log_message(guild, f'* message of "{author}" in "{channel}#{channel.id}" was deleted since it did not contain a command')
             return
 
         await lfg_bot.process_commands(message)
