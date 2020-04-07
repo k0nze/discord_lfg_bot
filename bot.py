@@ -11,7 +11,7 @@ from discord.ext import commands
 from os.path import join, dirname
 from dotenv import load_dotenv
 
-VERSION = "0.1"
+VERSION = "0.1.1"
 
 message_purger = None
 
